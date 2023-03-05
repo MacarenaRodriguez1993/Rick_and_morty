@@ -1,1 +1,5 @@
-<p>episodes works!</p>
+<div *ngIf="episode">
+  <h1>Episodio n° {{ episode.id }}</h1>
+  <h2>Nombre: {{ episode.name }}</h2>
+  <h3>Emitido : {{ episode.air_date }}</h3>
+</div>
