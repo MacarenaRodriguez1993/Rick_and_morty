@@ -1,1 +1,12 @@
-<p>details works!</p>
+<div *ngIf="character">
+  <img [src]="character.image" [alt]="character.name" />
+  <div>
+    <h3>Listado de Episodios</h3>
+    <div *ngFor="let epi of numberEpisode">
+      <h5>
+        Episodio {{ epi }}
+        <button (click)="goEpisode(epi)">Ver</button>
+      </h5>
+    </div>
+  </div>
+</div>
