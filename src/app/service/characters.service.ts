@@ -17,6 +17,6 @@ export class CharactersService {
   }
   //Llamado a la API para traer un personaje por id
   getCharacterById(id: number): Observable<Character> {
-    return this.http.get<Character>(`${this.url_api}/${id}`);
+    return this.http.get<Character>(`${environment.baseUrl}character/${id}`);
   }
 }
