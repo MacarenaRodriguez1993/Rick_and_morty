@@ -1,7 +1,15 @@
-<div infiniteScroll (scrolled)="scrollDown()">
-  <app-character
-    [character]="character"
+<div
+  class="container-fluid d-flex justify-content-center m-auto row"
+  infiniteScroll
+  (scrolled)="scrollDown()"
+>
+  <div
+    class="col-xs-12 col-sm-6 col-md-4 col-lg-3"
     *ngFor="let character of characters"
-  ></app-character>
-  <button *ngIf="showUp" (click)="scroll0()" class="buttonUp">subir</button>
+  >
+    <app-character [character]="character"></app-character>
+  </div>
 </div>
+<button *ngIf="showUp" (click)="scroll0()" class="buttonUp">
+  <i class="bi bi-arrow-up-circle"></i>
+</button>

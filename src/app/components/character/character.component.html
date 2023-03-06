@@ -1,6 +1,14 @@
-<div (click)="details(character.id)" class="card" style="width: 18rem">
+<div
+  (click)="details(character.id)"
+  class="card m-auto mb-3"
+  style="width: 16rem"
+>
   <img [src]="character.image" class="card-img-top" [alt]="character.name" />
   <div class="card-body">
-    <h1 class="card-text">{{ character.name }}</h1>
+    <div class="card-text">
+      <h5>{{ character.name.slice(0, 15) }}</h5>
+      <p>{{ character.species }}</p>
+      <p>{{ character.gender }}</p>
+    </div>
   </div>
 </div>
