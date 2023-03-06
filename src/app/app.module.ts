@@ -9,7 +9,7 @@ import { DetailsComponent } from './pages/details/details.component';
 import { EpisodesComponent } from './pages/episodes/episodes.component';
 import { CharactersComponent } from './pages/characters/characters.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,12 @@ import { HttpClientModule } from '@angular/common/http';
     EpisodesComponent,
     CharactersComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    InfiniteScrollModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,4 +1,7 @@
-<app-character
-  [character]="character"
-  *ngFor="let character of characters"
-></app-character>
+<div infiniteScroll (scrolled)="scrollDown()">
+  <app-character
+    [character]="character"
+    *ngFor="let character of characters"
+  ></app-character>
+  <button *ngIf="showUp" (click)="scroll0()" class="buttonUp">subir</button>
+</div>

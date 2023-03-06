@@ -15,6 +15,7 @@ export class DetailsComponent implements OnInit {
     private router: Router
   ) {}
 
+  //inicializacion de variables
   character: Character | undefined;
   numberEpisode: string[] = [];
 
