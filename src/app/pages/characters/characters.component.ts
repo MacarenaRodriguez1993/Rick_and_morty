@@ -4,6 +4,7 @@ import { Inject } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Character } from 'src/app/models/character';
 import { CharactersService } from 'src/app/service/characters.service';
+import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-characters',
   templateUrl: './characters.component.html',
@@ -47,6 +48,9 @@ export class CharactersComponent implements OnInit {
 
   //Metodo para traer los personajes de la api
   getCharacters() {
+    //fetch(`${environment.baseUrl}character`)
+    //  .then((resp) => resp.json())
+    //  .then((data) => (this.characters = data.results));
     this.characterService.getCharacters(this.pageNum).subscribe((res) => {
       const { info, results } = res;
       this.characters = [...this.characters, ...results];
